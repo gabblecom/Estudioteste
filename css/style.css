@@ -226,7 +226,7 @@ blockquote p {
     list-style: none outside none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: right;
     width: 100%;
 }
 .navigation li {
@@ -239,7 +239,7 @@ blockquote p {
     font-family: 'Montserrat',sans-serif;
     font-size: 13px;
     line-height: 18px;
-    padding: 40px 15px;
+    padding: 50px 15px;
     text-transform: uppercase;
 }
 .navigation li ul{
@@ -288,7 +288,7 @@ blockquote p {
     display: block;
     height: 30px;
     line-height: 30px;
-    margin: 34px 0;
+    margin: 44px 0;
     text-align: center;
     text-transform: uppercase;
     width: 30px;
@@ -431,10 +431,10 @@ blockquote p {
 /*-----PARALLAX IMAGE SETTING HERE---*/
 .bg1 .para-img{background-image:url(../images/bg/1.jpg);}
 .bg2 .para-img{background-image:url(../images/bg/2.jpg);}
-.bg3 .para-img{background-image:url(../images/bg/3.jpg);}
+.bg3 .para-img{background-image:url(../images/bg/2.jpg);}
 .bg4 .para-img{background-image:url(../images/bg/4.jpg);}
 
-.slider-para .container{padding-top:140px;padding-bottom:140px;}
+.slider-para .container{padding-top:170px;padding-bottom:170px;}
 .box-para {
     text-align: center;
 }
@@ -450,7 +450,7 @@ blockquote p {
 .para-title {
 	color: #fff;
 	font-family: 'Raleway', sans-serif;
-	font-size: 60px;
+	font-size: 4rem;
 	font-weight: 900;
 	letter-spacing: -1px;
 	line-height: 1;
@@ -462,7 +462,7 @@ blockquote p {
     color: #fff;
     display: inline;
     font-family: montserrat;
-    font-size: 23px;
+    font-size: 2rem;
     letter-spacing: -1px;
     line-height: 1;
     margin: 0;
@@ -502,7 +502,7 @@ blockquote p {
 	overflow: visible;
 }
 
-.img-small-parallax{max-width:110px;margin-top:30px;}
+.img-small-parallax{max-width:110px;margin-top:0px;}
 /*----------------------------------------------------------TEAM SECTION------------------------------------------------*/
 .title-strong {
     font-size: 25px;
