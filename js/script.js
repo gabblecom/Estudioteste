@@ -1,65 +1,3 @@
-//google map load after all page finish
-$(window).bind("load", function () {
-    $('#map_canvas').gmap({
-        'center': '-23.94357,-46.33072',
-        'zoom': 15,
-        scrollwheel: false,
-        'disableDefaultUI': false,
-        'styles': [{
-            stylers: [{
-                lightness: 7
-            }, {
-                saturation: -100
-            }]
-        }],
-        'callback': function () {
-            var self = this;
-            self.addMarker({
-                'position': this.get('map').getCenter(),
-                icon: 'images/office-building.png',
-            }).click(function () {
-                self.openInfoWindow({
-                    'content': 'Visite-nos <br> End.: Av. Sen. Pinheiro Machado, 22, CJ 42<br> Phone: 13 3225-2951 <br>Email: contato@gabblecomunicacao.com.br'
-                }, this);
-            });
-        }
-    });
-}).load();
-
-
-
-
-//Page scrolling
-$('.navigation').onePageNav({
-    filter: ':not(.external)',
-    scrollThreshold: 0.25,
-    scrollOffset: 0
-});
-//sticky navigation
-$(".for-sticky").sticky({
-    topSpacing: 0,
-    className: 'animated'
-});
-
-
-
-
-//parallax setting
-$.stellar.positionProperty.position = {
-
-    setTop: function ($element, newTop, originalTop) {
-        $element.css('top', newTop);
-        if ($element.hasClass("para-opacity")) {
-            var rate = $(window).height() / 1.5;
-            $element.css('opacity', 1 - (newTop / rate));
-        }
-    },
-    setLeft: function ($element, newLeft, originalLeft) {
-        $element.css('left', newLeft);
-    }
-
-}
-
 //running only in desktop
 if (Modernizr.touch) {
     //home slider setting on touch device
@@ -91,12 +29,61 @@ if (Modernizr.touch) {
     });
 }
 
-//parallax ticker
-$(".slider-para").list_ticker({
-    speed: 5000,
-    effect: 'fade'
+
+//google map load after all page finish
+$(window).bind("load", function () {
+    $('#map_canvas').gmap({
+        'center': '-23.94357,-46.33072',
+        'zoom': 15,
+        scrollwheel: false,
+        'disableDefaultUI': false,
+        'styles': [{
+            stylers: [{
+                lightness: 7
+            }, {
+                saturation: -100
+            }]
+        }],
+        'callback': function () {
+            var self = this;
+            self.addMarker({
+                'position': this.get('map').getCenter(),
+                icon: 'images/office-building.png',
+            }).click(function () {
+                self.openInfoWindow({
+                    'content': 'Visite-nos <br> End.: Av. Sen. Pinheiro Machado, 22, CJ 42<br> Phone: 13 3225-2951 <br>Email: contato@gabblecomunicacao.com.br'
+                }, this);
+            });
+        }
+    });
+}).load();
+
+
+
+
+$(document).ready(function () {
+    //Page scrolling
+    $('.navigation').onePageNav({
+        filter: ':not(.external)',
+        scrollThreshold: 0.25,
+        scrollOffset: 0
+    });
+    //sticky navigation
+    $(".for-sticky").sticky({
+        topSpacing: 0,
+        className: 'animated'
+    });
+
 });
 
+//make the owl paginaton vertical aligned
+var $control = $('.owl-pagination');
+var height = $('.owl-pagination').height();
+$(window).bind("load", function () {
+    $control.height(height);
+    $control.css('margin-top', -height / 2);
+
+});
 
 
 //add/remove active class in team nav
@@ -139,15 +126,6 @@ $('.port-filter a').click(function () {
 $(".port-filter a").click(function (e) {
     $(".port-filter a").removeClass("active");
     $(this).addClass("active");
-});
-
-//make the owl paginaton vertical aligned
-var $control = $('.owl-pagination');
-var height = $('.owl-pagination').height();
-$(window).bind("load", function () {
-    $control.height(height);
-    $control.css('margin-top', -height / 2);
-
 });
 
 //portfolio ajax setting
@@ -203,8 +181,13 @@ $('.slider-link,.go-btn').bind('click', function (event) {
     event.preventDefault();
 });
 
-//create menu for tablet/mobile
+//parallax ticker
+$(".slider-para").list_ticker({
+    speed: 5000,
+    effect: 'fade'
+});
 
+//create menu for tablet/mobile
 $(".header .navigation").clone(false).find("ul,li").removeAttr("id").remove(".sub-menu").appendTo($(".mobile-menu"));
 $(".mobile-menu .sub-menu").remove();
 $('.mobile-menu').on('show.bs.collapse', function () {
@@ -244,6 +227,29 @@ $('.list-title').waypoint(function (direction) {
 }, {
     offset: 'bottom-in-view',
     triggerOnce: true
+});
+
+//supersized (fullscreen) background setting
+jQuery(function ($) {
+    $.supersized({
+        // Functionality
+        slide_interval: 7000, // Length between transitions
+        transition: 1, // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+        transition_speed: 600, // Speed of transition
+
+        // Components							
+        slide_links: 'false', // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+        slides: [ // Slideshow Images
+            {
+                image: 'images/slider1.jpg'
+            }, {
+                image: 'images/slider2.jpg'
+            }, {
+                image: 'images/slider3.jpg'
+            }
+        ]
+
+    });
 });
 
 //preloader
