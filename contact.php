@@ -1,6 +1,6 @@
 <?php
-$toEmail 		= "contato@gabblecomunicacao.com.br"; //Replace it recipient email address
-$subject 		= 'Contato de Gabble Estudio'; //Subject line for emails
+$toEmail 		= "email@youremail.com"; //Replace it recipient email address
+$subject 		= 'Ah!! My email from Somebody out there...'; //Subject line for emails
 
 //Let's clean harmful characters from raw POST data using PHP Sanitize filters.
 $postName 		= filter_var($_POST["postName"], FILTER_SANITIZE_STRING); 
@@ -60,12 +60,12 @@ $Body .= "\n";
 
 if(!$sentMail)
 	{
-		header('HTTP/1.1 500 Não pudemos enviar o seu e-mails! Desculpa..'); 
+		header('HTTP/1.1 500 Couldnot send mail! Sorry..'); 
 		exit();
 	}else{
-		echo '<h3>Olá '.$postName.',<br/> Obrigado por nos enviar uma mensagem</h3>
-		<p>Sua mensagem será lida pela nossa equipe e assim que possível entraremos em contato.
-		<br />Obrigado.</p>';
+		echo '<h3>Hi '.$postName.',<br/> Thank you for your email</h3>
+		<p>Your email has already arrived in our Inbox, all We need to do is Check it..
+		<br />Good day.</p>';
 	}
 
 ?>
