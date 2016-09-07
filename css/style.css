@@ -1279,13 +1279,13 @@ input:focus, textarea:focus {
 	}
 	.logo a{padding:20px 0;}
 	.menu-btn span {
-    margin: 23px 0;
+    margin-right: 15px;
 }
 	.open-title{font-size:50px;}
 	.box-para{display:none;}
 	.port-item{width:100%;}
 	.header .navigation{display:none;}
-	.slider-big{font-size:65px;}
+	.slider-big{font-size:5.1rem;}
 	.slider-small,.para-text{font-size:20px;}
 	.slider-link {
 		padding: 5px 23px;
@@ -1293,10 +1293,51 @@ input:focus, textarea:focus {
 	.para-title{font-size:50px;}
 	.blog-masonry .blog-post{width:100%;}
 	.home-slider{
-	background-size:100% auto ;
+	background-size:105% 105%;
+    background-position: center top;
 	}
 	.para-img{background-size:768px auto;background-attachment:scroll;}
 }
+.content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 70px 0 0;
+    position: relative;
+    margin-right: 10px;
+}
+.spacing40 {
+    height: 10px;
+    width: 100%;
+}
+.spacing20 {
+    height: 10px;
+    width: 100%;
+}
+.slider-para .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.para-text {
+    font-size: 1.7rem;
+}
+.spacing80 {
+    height: 20px;
+    width: 100%;
+}
+.contact-btn {
+    border: 2px solid;
+    border-radius: 50px;
+    color: #333333;
+    display: inline-block;
+    font-family: montserrat;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+
+
+
 @media (max-width:570px) {
 	.section-title {
     font-size: 5.5rem;
