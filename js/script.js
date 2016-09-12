@@ -1,7 +1,7 @@
 //google map load after all page finish
 $(window).bind("load", function () {
     $('#map_canvas').gmap({
-        'center': '-6.94010,107.62575',
+        'center': '-23.94357,-46.33072',
         'zoom': 15,
         scrollwheel: false,
         'disableDefaultUI': false,
@@ -19,7 +19,7 @@ $(window).bind("load", function () {
                 icon: 'images/office-building.png',
             }).click(function () {
                 self.openInfoWindow({
-                    'content': 'Visit Us <br> Address: 11231 Buah Batu Bandung <br> Phone: 1233-2324-2324 <br>Email: company-email@email.com'
+                    'content': 'Visite-nos <br> End.: Av. Sen. Pinheiro Machado, 22, CJ 42<br> Phone: 13 3225-2951 <br>Email: contato@gabblecomunicacao.com.br'
                 }, this);
             });
         }
@@ -230,7 +230,7 @@ $('.mobile-menu a').bind('click', function (event) {
 });
 
 
-//count function	
+//count function    
 $('.list-title').waypoint(function (direction) {
     $('.list-title').each(function () {
         counter = $(this).attr('data-count'),
